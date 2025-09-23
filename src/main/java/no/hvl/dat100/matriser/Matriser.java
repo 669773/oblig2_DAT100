@@ -23,8 +23,19 @@ public class Matriser {
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		String matriseS="";
+		for(int i =0; i < matrise.length; i++){
+
+			for(int j = 0; j< matrise[i].length; j++){
+				matriseS += matrise[i][j];
+
+				matriseS += " ";
+			}
+			matriseS += "\n";
+
+		}
+		return matriseS;
+		//throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
 		
 	}
 
