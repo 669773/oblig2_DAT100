@@ -4,11 +4,12 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-
-		for(int i= 0; i <= tabell.length; i++) {
-			System.out.print(tabell[i] + " | ");
+		String tabellS="";
+		for(int i= 0; i < tabell.length; i++) {
+			tabellS = tabell[i] + " | ";
 		}
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		System.out.print(tabellS);
+		//throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
 
 	}
 
@@ -16,11 +17,14 @@ public class Tabeller {
 	public static String tilStreng(int[] tabell) {
 
 		String tabellString ="";
-		for(int i= 0; i <= tabell.length; i++) {
-			tabellString += Integer.toString(tabell[i]) + ", ";
+        for (int i = 0; i < tabell.length; i++) {
+            tabellString += Integer.toString(tabell[i]);
+			if( i != tabell.length -1){
+				tabellString += ",";
+			}
+        }
 		return "[" + tabellString + "]";
-		}
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		//throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
 	}
 
 	// c)
