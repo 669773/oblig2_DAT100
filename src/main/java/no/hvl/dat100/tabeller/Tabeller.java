@@ -5,7 +5,9 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
+		for(int i= 0; i <= tabell.length; i++) {
+			System.out.print(tabell[i] + " | ");
+		}
 		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
 
 	}
@@ -13,7 +15,11 @@ public class Tabeller {
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		// TODO
+		String tabellString ="";
+		for(int i= 0; i <= tabell.length; i++) {
+			tabellString += Integer.toString(tabell[i]) + ", ";
+		return "[" + tabellString + "]";
+		}
 		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
 	}
 
