@@ -41,17 +41,38 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
+
+		int[][] skalert = new int[matrise.length][matrise[0].length];
+        for(int i = 0; i< matrise.length; i++){
+            for(int j= 0; j< matrise[i].length; j++){
+                skalert[i][j]= matrise[i][j]*tall;
+            }
+        }
+        return skalert;
+		//throw new UnsupportedOperationException("Metoden skaler ikke implementert");
 	
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
+		boolean like = true;
+        if(a.length != b.length){
+            return false;
+        }
+        for(int i=0; i< a.length; i++){
+            if(a[i].length != b[i].length){
+                return false;
+            }
+            for(int j=0; j< a[i].length; j++){
+                if(a[i][j] != b[i][j]){
+                    return false;
+
+                }
+            }
+        }
+        return like;
+		//throw new UnsupportedOperationException("Metoden erLik ikke implementert");
 		
 	}
 	
